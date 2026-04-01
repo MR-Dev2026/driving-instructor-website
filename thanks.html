@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="10;url=index.html">
+    <title>Message Sent | Rawat Driving School</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { 
+            background: #f4f4f4; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            font-family: sans-serif; 
+        }
+        .card { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            text-align: center; 
+            border-top: 5px solid #e63946; 
+            max-width: 400px; 
+        }
+        .btn { 
+            display: inline-block; 
+            background: #e63946; 
+            color: white; 
+            padding: 10px 20px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            margin-top: 20px; 
+            font-weight: bold; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1 style="color: #28a745;">✔ Message Sent</h1>
+        <p>Thank you for your enquiry. I will contact you shortly to discuss booking your manual lessons.</p>
+        <p>Redirecting back to home in <span id="count">10</span> seconds...</p>
+        <a href="index.html" class="btn">Return Home Now</a>
+    </div>
+
+    <script>
+        let seconds = 10;
+        const countEl = document.getElementById('count');
+        
+        setInterval(() => {
+            seconds--;
+            if (countEl) countEl.textContent = seconds;
+            if (seconds <= 0) {
+                window.location.href = "index.html";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

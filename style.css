@@ -1,0 +1,733 @@
+/* --- RAWAT DRIVING SCHOOL BRANDING --- */
+:root {
+    --primary-red: #e63946;    /* Main brand red */
+    --accent-red: #b91c1c;     /* Hover state red */
+    --dark-black: #1a1a1a;     /* Deep black for background/text */
+    --pure-white: #ffffff;     /* Body background */
+    --light-grey: #f8f9fa;     /* Section contrast */
+    --transition: all 0.3s ease;
+}
+
+/* --- RESET & BASE STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+section {
+    scroll-margin-top: 100px;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-black);
+    background-color: var(--pure-white);
+}
+
+/* --- NAVIGATION & TEXT LOGO --- */
+nav {
+    background: var(--dark-black);
+    color: white;
+    padding: 1rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 4px solid var(--primary-red);
+}
+
+.logo-text-only {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+.brand-name {
+    color: var(--primary-red);
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.sub-text {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li { margin-left: 25px; }
+
+nav ul li a {
+    color: white !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--primary-red) !important;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* --- ENHANCED NAV LOGO LAYOUT --- */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--pure-white);
+    padding: 5px 15px;
+    border-radius: 6px;
+}
+
+.logo-divider {
+    width: 2px;
+    height: 35px;
+    background-color: #ddd;
+    margin: 0 5px;
+}
+
+.dvsa-nav-logo {
+    height: 35px;
+    width: auto;
+}
+
+/* Mobile Tweak: Hide the DVSA logo on very small screens to save space */
+@media (max-width: 480px) {
+    .logo-divider, .dvsa-nav-logo { display: none; }
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 140px;
+    }
+
+    section {
+        scroll-margin-top: 140px;
+    }
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    position: relative;
+    height: 75vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    background: var(--primary-red);
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: var(--transition);
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: var(--pure-white);
+    color: var(--primary-red);
+    transform: translateY(-3px);
+}
+
+.btn-small {
+    background: var(--dark-black);
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-small:hover { background: var(--primary-red); }
+
+/* --- SECTION BASE STYLES --- */
+section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+/* --- SERVICES SECTION --- */
+.services {
+    background: var(--light-grey);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-bottom: 5px solid var(--primary-red);
+    transition: var(--transition);
+}
+
+.card:hover { transform: translateY(-10px); }
+
+.card i {
+    font-size: 3rem;
+    color: var(--primary-red);
+    margin-bottom: 20px;
+}
+
+/* --- ABOUT ME (Meet Your Instructor) --- */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+
+    max-width: 1050px;   /* SAME width as car-grid */
+    margin: 0 auto;     /* THIS is the centering */
+    width: 100%;
+}
+
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.experience-badge {
+    display: inline-block;
+    background: var(--primary-red);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-stats {
+    list-style: none;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.about-image {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0 0 360px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 15px;
+    box-shadow: 20px 20px 0px var(--light-grey);
+    display: block;
+}
+
+/* --- THE CAR SECTION (Training Vehicle) --- */
+.the-car {
+    background: var(--pure-white);
+}
+
+/* grid stays like your original layout, but with equal-height cards */
+.car-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 22px;
+    margin-top: 28px;
+
+    /* keeps it centered and reduces "empty space" feeling */
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    /* KEY: makes all 3 cards equal height */
+    align-items: stretch;
+}
+
+/* Image cards: equal height + image fills space */
+.car-image-container {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-bottom: 4px solid var(--primary-red);
+}
+
+/* IMPORTANT:
+   - flex:1 makes the image area expand to match the middle card height
+   - object-fit: contain prevents cropping
+*/
+.car-image-container img {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #fff;
+    padding: 8px;      /* keeps a nice clean border; reduce to 4px if you want bigger */
+    display: block;
+}
+
+/* Caption stays at bottom, consistent */
+.car-image-container p {
+    margin: 0;
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.car-content {
+    text-align: left;
+    padding: 20px;
+    background: var(--light-grey);
+    border-radius: 10px;
+
+    /* ensures the middle card also stretches correctly */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.car-features {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.car-features li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.car-features i {
+    color: var(--primary-red);
+    font-size: 1.2rem;
+}
+
+/* Responsive fix for the car grid */
+@media (max-width: 992px) {
+    .car-grid { grid-template-columns: 1fr; }
+    .about-image { justify-content: center; flex: 1 1 360px; }
+}
+
+/* --- CALCULATOR --- */
+.calc-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: left;
+    background: white;
+}
+
+.calc-container label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+.calc-container select, .calc-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#calc-result {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary-red);
+}
+
+/* --- FAQ SECTION STYLES --- */
+.faq { background: var(--light-grey); }
+
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.faq-item {
+    background: var(--pure-white);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden;
+    border-left: 5px solid var(--primary-red);
+}
+
+.faq-question {
+    padding: 20px;
+    font-weight: bold;
+    color: var(--dark-black);
+    cursor: pointer;
+    background: #fff;
+    font-size: 1.1rem;
+}
+
+.faq-answer {
+    padding: 0 20px 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq-item:hover {
+    transform: translateX(5px);
+    transition: var(--transition);
+}
+
+/* --- CONTACT FORM --- */
+.contact-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: var(--light-grey);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-group { margin-bottom: 20px; }
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 5px rgba(230, 57, 70, 0.3);
+}
+
+/* --- PRICING TABLE --- */
+.pricing { background: var(--light-grey); }
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background: var(--dark-black);
+    color: white;
+    padding: 20px;
+}
+
+td {
+    padding: 15px;
+    border: 1px solid #eee;
+}
+
+tr:nth-child(even) { background: #fdfdfd; }
+
+/* --- TESTIMONIALS SLIDER --- */
+.testimonials {
+    background: var(--dark-black);
+    color: white;
+}
+
+.testimonial-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #222;
+    border-radius: 15px;
+    border: 1px solid #333;
+}
+
+.stars { color: #ffcc00; margin-bottom: 15px; }
+
+#test-text {
+    font-style: italic;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+#test-name {
+    color: var(--primary-red);
+    font-weight: bold;
+    display: block;
+}
+
+/* --- CONTACT GRID (PHONE/EMAIL) --- */
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.contact-item i {
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    margin-bottom: 10px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #000;
+    color: #777;
+    padding: 30px;
+    border-top: 1px solid #222;
+}
+
+/* --- MOBILE VIEW --- */
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--dark-black);
+        padding: 20px;
+        border-bottom: 4px solid var(--primary-red);
+    }
+
+    .nav-list.active { display: flex; }
+
+    .nav-list li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .hero h1 { font-size: 2.2rem; }
+    
+
+
+
+    /* ===== SPACING + WIDTH FIX PATCH ===== */
+
+/* reduce huge vertical gaps */
+section {
+  padding: 55px 8% !important;
+}
+
+/* keep about consistent with other sections */
+.about-me {
+  padding: 55px 8% !important;
+}
+
+/* consistent content width across the site */
+.about-container,
+.car-grid,
+.calc-container,
+.faq-container,
+.testimonial-container,
+.contact-container,
+.table-wrapper {
+  max-width: 1100px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* tighten the gap under headings in car section */
+.car-grid {
+  margin-top: 18px !important;
+}
+
+/* make calculator feel less "lost" */
+.calc-container {
+  max-width: 650px !important;
+}
+
+
+
+
+/* ================================
+   LEGAL PAGES (Terms / Privacy)
+   Add at the bottom of style.css
+================================ */
+
+/* Main wrapper for legal pages */
+.legal-page {
+  padding: 40px 8%;
+  background: var(--light-grey);
+}
+
+/* Makes it consistent with your site widths */
+.legal-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card styling to match your cards + brand */
+.legal-card {
+  background: var(--pure-white);
+  border-radius: 10px;
+  padding: 35px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border-left: 5px solid var(--primary-red);
+  text-align: left;
+}
+
+/* Headings */
+.legal-card h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  color: var(--dark-black);
+}
+
+.legal-meta {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Section headings */
+.legal-card h2 {
+  margin-top: 22px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: var(--dark-black);
+}
+
+/* Text & lists */
+.legal-card p {
+  margin-bottom: 14px;
+  color: #444;
+}
+
+.legal-card ul {
+  margin: 10px 0 16px 18px;
+}
+
+.legal-card li {
+  margin-bottom: 10px;
+}
+
+/* Action buttons row */
+.legal-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+/* Optional outline button variant using your brand */
+.btn-outline {
+  background: transparent;
+  color: var(--primary-red);
+  border: 2px solid var(--primary-red);
+}
+
+.btn-outline:hover {
+  background: var(--primary-red);
+  color: white;
+}
+
+/* ================================
+   WHATSAPP CONTACT STYLING
+================================ */
+
+.contact-item a {
+    text-decoration: none;
+    color: var(--dark-black);
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: var(--transition);
+}
+
+.contact-item a:hover {
+    color: #25D366;
+}
+
+.contact-item .fa-whatsapp {
+    color: #25D366;
+}
+
+.contact-item {
+    cursor: pointer;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+}
+

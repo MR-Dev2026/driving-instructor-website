@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions | Rawat Driving School</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAV (matches your existing nav styling) -->
+  <nav>
+    <div class="logo-text-only">
+      <span class="brand-name">Rawat</span>
+      <span class="sub-text">Driving School</span>
+    </div>
+
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <div class="menu-toggle" id="mobile-menu">☰</div>
+  </nav>
+
+  <!-- LEGAL CONTENT -->
+  <main class="legal-page">
+    <div class="legal-container">
+      <div class="legal-card">
+        <h1>Terms &amp; Conditions</h1>
+        <p class="legal-meta">Last updated: <strong>31 Jan 2026</strong></p>
+
+        <h2>1. About us</h2>
+        <p>These Terms &amp; Conditions apply to driving lessons provided by Rawat Driving School (“we”, “us”, “our”) to you (“student”, “you”).</p>
+
+        <h2>2. Booking lessons</h2>
+        <ul>
+          <li>Lessons must be pre-booked and confirmed by us.</li>
+          <li>You are responsible for providing accurate contact details.</li>
+          <li>We may refuse or stop a lesson if it is unsafe or inappropriate to proceed.</li>
+        </ul>
+
+        <h2>3. Payments</h2>
+        <ul>
+          <li>Payment is required in advance unless agreed otherwise.</li>
+          <li>Block bookings (if offered) may be discounted.</li>
+          <li>Prices may change, but confirmed bookings are honoured at the agreed rate.</li>
+        </ul>
+
+        <h2>4. Cancellations &amp; missed lessons</h2>
+        <ul>
+          <li>Please give at least <strong>48 hours’ notice</strong> to cancel or reschedule.</li>
+          <li>Late cancellations may be charged in full.</li>
+          <li>If you do not attend at the agreed time/location, the lesson may be charged in full.</li>
+        </ul>
+
+        <h2>5. Punctuality</h2>
+        <p>If you are late, lesson time may be reduced. If we are late, we will extend the lesson where possible or make up the time.</p>
+
+        <h2>6. Safety</h2>
+        <ul>
+          <li>You must follow the instructor’s reasonable directions.</li>
+          <li>We may end a lesson early if safety is at risk.</li>
+          <li>Lessons will not proceed if you are under the influence of alcohol/drugs.</li>
+        </ul>
+
+        <h2>7. Driving tests</h2>
+        <ul>
+          <li>Use of the instructor’s car for a test is subject to availability and suitability.</li>
+          <li>We may decline test use if you are not test-ready or if it is unsafe to proceed.</li>
+        </ul>
+
+        <h2>8. Changes</h2>
+        <p>We may update these Terms from time to time. The latest version will be posted on this page.</p>
+
+        <div class="legal-actions">
+          <a class="btn" href="index.html">Back to Home</a>
+          <a class="btn btn-outline" href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p style="text-align:center;">© <span id="year"></span> Rawat Driving School</p>
+  </footer>
+
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // mobile menu toggle (uses your existing IDs/classes)
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+    if (menuToggle && navList) {
+      menuToggle.addEventListener('click', () => navList.classList.toggle('active'));
+    }
+  </script>
+</body>
+
+<script src="script.js"></script>
+
+</html>
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Rawat Driving School</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo-text-only">
+      <span class="brand-name">Rawat</span>
+      <span class="sub-text">Driving School</span>
+    </div>
+
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <div class="menu-toggle" id="mobile-menu">☰</div>
+  </nav>
+
+  <main class="legal-page">
+    <div class="legal-container">
+      <div class="legal-card">
+        <h1>Privacy Policy</h1>
+        <p class="legal-meta">Last updated: <strong>31 Jan 2026</strong></p>
+
+        <h2>1. What we collect</h2>
+        <p>When you contact us or book lessons, we may collect:</p>
+        <ul>
+          <li>Name</li>
+          <li>Phone number</li>
+          <li>Email address</li>
+          <li>Message content / booking details</li>
+        </ul>
+
+        <h2>2. How we use your information</h2>
+        <ul>
+          <li>To respond to enquiries</li>
+          <li>To manage bookings and lesson schedules</li>
+          <li>To provide customer support</li>
+        </ul>
+
+        <h2>3. Sharing your data</h2>
+        <p>We do not sell your personal data. We only share information where required to provide a service you requested, or where legally required.</p>
+
+        <h2>4. Cookies</h2>
+        <p>If you use analytics tools, cookies may be used to understand website traffic. If you do not use analytics, you can remove this section.</p>
+
+        <h2>5. Your rights</h2>
+        <p>You can request access, correction, or deletion of your personal data by contacting us using the details on our website.</p>
+
+        <h2>6. Changes</h2>
+        <p>We may update this policy from time to time. The latest version will be posted on this page.</p>
+
+        <div class="legal-actions">
+          <a class="btn" href="index.html">Back to Home</a>
+          <a class="btn btn-outline" href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p style="text-align:center;">© <span id="year"></span> Rawat Driving School</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+    if (menuToggle && navList) {
+      menuToggle.addEventListener('click', () => navList.classList.toggle('active'));
+    }
+  </script>
+</body>
+
+<script src="script.js"></script>
+
+</html>
